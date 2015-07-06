@@ -1,0 +1,21 @@
+<p>This is the country view.</p>
+<form name="addform" novalidate="novalidate">
+  <div>
+    <input type="text" placeholder="country name" name="name" data-ng-model="country.name" required=""> <input type="text" placeholder="code" name="code" data-ng-model="country.code" required=""><button data-ng-click="addCountry();" data-ng-disabled="!addform.$valid">Add</button>
+  </div>
+</form>
+<table>
+  <thead>
+  <tr>
+    <th>Country</th>
+    <th>Code</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr data-ng-repeat="country in countries track by country.id">
+    <td>{{country.name}}</td>
+    <td>{{country.code}}</td>
+  </tr>
+  </tbody>
+</table>
